@@ -3,8 +3,13 @@
     /*font-family: 'Poppins', sans-serif;*/
     /*purpose : everything*/
     /*weights : 500, 700*/
-/*###########*/
+/*end of Typography*/
 
+
+
+
+
+/*base styling / resets*/
 :root {
     /*Colors*/
         /*Primary colors*/
@@ -19,10 +24,8 @@
         --grayish-violet:hsl(0, 0%, 75%);
         --very-dark-blue:hsl(255, 11%, 22%);
         --very-dark-violet:hsl(260, 8%, 14%);
-    /*######*/    
+    /*end of colors*/    
 }
-
-/*base styling / resets*/
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -55,3 +58,45 @@ a {
     color:currentColor;
     text-decoration:none;
  }
+/*end of base styling / resets/*
+
+
+
+
+
+ /*navbar*/
+
+ /*end of navbar*/
+
+
+
+
+
+/*main*/
+
+ /*end of main*/
+
+
+
+
+ 
+ /*utilities*/
+    /*generic button styles*/
+    .btn {
+
+    }
+
+    .btn:hover {
+        cursor:pointer;
+    }
+
+    .btn--type-1 {
+        /*very round corners*/
+    }
+
+    .btn--type-2 {
+        /*little round corners*/
+    }
+    /*end of generic button styles*/
+
+/*end of utilities*/
