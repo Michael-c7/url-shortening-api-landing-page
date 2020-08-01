@@ -56,9 +56,11 @@
 
 
         <main class="main-content">
-            <img class="main-content__hero-image" src="assets/images/illustration-working.svg" alt="">
+            <div class="main-content__hero-image-container">
+                <img class="main-content__hero-image" src="assets/images/illustration-working.svg" alt="">
+            </div>
             <div class="main-content__content">
-                <h1 class="main-content__header">More than just shorter links</h1>
+                <h1 class="main-content__header">More than just<span> shorter links</span></h1>
                 <p class="main-content__text">
                 Build your brand’s recognition
                 and get detailed insights on how your links are performing.
@@ -75,21 +77,21 @@
 
         <!--link-shortener-->
         <article class="link-shortener">
-            <section class="link-shortener">
+            <section class="link-shortener-section">
                 <div class="link-shortener__input-container">
-                    <div class="link-shortener__input" class="add-link-warning-msg">Please add a link</div>
-                    <input type="text" placeholder="Shorten a link here...">
+                    <input class="link-shortener__input" type="text" placeholder="Shorten a link here...">
+                    <!-- <div class="link-shortener__input" class="add-link-warning-msg">Please add a link</div> -->
                 </div>
                 <button class="btn btn--type-2 btn--shorten-it">Shorten it!</button>
             </section>
 
-            <section class="link-shortener__output-container">
+            <!-- <section class="link-shortener__output-container">
                 <div class="link-shortener__output">
                     <span class="link-shortener__output__lo">https://www.frontendmentor.io</span>
                     <span class="link-shortener__output__lm">https://rel.ink/gxOXp9</span>
                     <button class="btn btn--type-2 btn--copy">Copy</button>
                 </div>
-            </section>
+            </section> -->
         </article>
         <!--end of link-shortener-->
 
