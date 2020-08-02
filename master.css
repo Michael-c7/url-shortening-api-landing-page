@@ -151,6 +151,10 @@ p {
     font-size: 2rem;
 }
 
+.main-content__header span {
+    display:block;
+}
+
 .main-content__text {
     margin:0 auto 1.25rem auto;
     width:28ch;
@@ -258,7 +262,7 @@ p {
     
     .btn--shorten-it {
         position: absolute;
-        font-size:1rem;
+        font-size:0.95rem;
         width:80%;
         height:2.5rem;
         left:50%;
@@ -272,7 +276,7 @@ p {
         width:100%;
         height:auto;
         /* background-color:goldenrod; */
-        padding-top:6.5rem;
+        padding-top:3.5rem;
     }
 
     
@@ -281,18 +285,21 @@ p {
         position: relative;
         background-color: #fff;
         width:80%;
-        margin:0 auto;
+        margin:1rem auto;
         height:10rem;
 
         display:flex;
         flex-direction: column;
         justify-content: space-around;
         align-items:flex-start;
+
+        border-radius:5px;
     }
 
     .link-shortener__output__lo,
     .link-shortener__output__lm {
         margin-left:5%;
+        font-size:0.80rem;
     }
 
     .link-shortener__output__lo::after {
@@ -312,11 +319,10 @@ p {
 
     .btn--copy {
         width:90%;
-        height:2.5rem;
-        font-size:1rem;
+        height:2rem;
+        font-size:0.85rem;
         align-self:center;
     }
-
     /*end of link-shortener*/
     
 
@@ -328,9 +334,75 @@ p {
 
 /*stats*/
 .stats {
-    padding-top:7rem;
+    padding-top:3rem;
     text-align: center;
+    line-height: 1.6;
 }
+
+.stats-content {
+
+}
+
+.stats-content__header {
+    font-size:1.5rem;
+}
+
+.stats-content__text {
+    font-size:0.85rem;
+    width:30ch;
+    margin:0 auto 2rem auto;
+}
+
+/* stats cards*/
+.stats__cards {
+    position: relative;
+}
+
+.stats__card {
+    position: relative;
+    background-color: #fff;
+    border-radius:3px;
+    width:80%;
+    margin:0 auto;
+}
+
+.stats__card__image {
+    position: relative;
+    background-color: darkslateblue;
+    background:var(--dark-violet);
+    width:75px;
+    height:75px;
+    border-radius:50%;
+
+    background-position: 50% 50%;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    
+}
+
+.stats__image-1 {
+    background-image: url("assets/images/icon-brand-recognition.svg");
+}
+
+.stats__image-2 {
+    background-image: url("assets/images/icon-detailed-records.svg");
+}
+
+.stats__image-3 {
+    background-image: url("assets/images/icon-fully-customizable.svg");
+}
+
+.stats__card__header {
+
+}
+
+.stats__card__text {
+    font-size:0.85rem;
+    width:26ch;
+    margin:0 auto;
+    line-height: 1.6;
+}
+
 /*end of stats*/
 
 
