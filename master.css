@@ -295,33 +295,25 @@ p {
         font-size:0.70rem;
         color:red;
         color:var(--red);
+        margin-top:5px;
     }
 
-    /*if warning-msg class is on*/
-    /* .warning-msg { } */
-
+    /*############
+    if their is no input / link
+    put into the input box apply these styles
+    */
     
-    .warning-msg.link-shortener__input::placeholder,
-    .warning-msg.link-shortener__input::-webkit-input-placeholder {
+    .warning-msg-on.link-shortener__input::placeholder,
+    .warning-msg-on.link-shortener__input::-webkit-input-placeholder {
         color:red;
         color:var(--red);
-        border-color:red;
-        border-color:var(--red)
-    }
-   
-
-    /**/
-    /* .warning-msg-on {
-        border-color:red;
-        border-color:var(--red)
     }
 
-    .link-shortener__input::placeholder.warning-msg-on,
-    .link-shortener__input::-webkit-input-placeholder.warning-msg-on,
-    .link-shortener__input::-moz-placeholder.warning-msg-on {
-        color:red;
-        color:var(--red);
-    } */
+    .warning-msg-on {
+        border:solid 2px red;
+        border-color:var(--red);
+    }
+    /*############*/
 
     
     .btn--shorten-it {
