@@ -82,13 +82,13 @@ p {
     display: flex;
     justify-content: space-between;
     align-items:center;
-    width:80%;
+    width:90%;
     height:100%;
     margin:0 auto;
 }
 
 .navbar-logo {
-    transform:scale(0.8);
+    transform:scale(0.9);
 }
 
 .navbar__hamburger-menu {
@@ -113,10 +113,6 @@ p {
 }
 
 .navbar__items-container {
-    display:block;
-}
-
-.navbar__items-container {
     position: absolute;
     display:flex;
     flex-direction: column;
@@ -127,13 +123,25 @@ p {
     width:100%;
     height:20rem;
 
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height 0.75s ease-in-out;
+
     top:150%;
     left:0;
     border-radius: 10px;
     text-align: center;
-    font-size:0.85rem;
+    font-size:1rem;
     
     z-index:400;
+
+}
+/* apply this class when you open
+ the .navbar__items-container */
+ .is-open {
+    max-height: 100rem;
+    transition: max-height 1s ease-in-out;
+    
 }
 
 .navbar__items-1 {
@@ -171,7 +179,7 @@ p {
 .btn--sign-up {
     width:80%;
     height:2.25rem;
-    font-size:0.85rem;
+    font-size:1rem;
 }
  /*end of navbar*/
 
@@ -183,7 +191,7 @@ p {
 .main-content {
     position: relative;
     width:100%;
-    margin-bottom:12rem;
+    margin-bottom:8rem;
 
     text-align:center;
 }
@@ -237,13 +245,14 @@ p {
     position: relative;
     background-color:gray;
     background-color:hsl(0, 0%, 93%);
-    padding-bottom:0.5rem;
+    padding-bottom:0.1rem;
+    margin-bottom:-2rem;
 }
 
     /*link-shortener*/
     .link-shortener-section {
         position: absolute;
-        width:80%;
+        width:90%;
         height:10rem;
         border-radius: 10px;
 
@@ -262,7 +271,7 @@ p {
     /*link input*/
     .link-shortener__input-container {
         position: absolute;
-        width:80%;
+        width:85%;
         height:2.5rem;
         left:50%;
         top:20%;
@@ -285,6 +294,7 @@ p {
         color:gray;
         color:var(--grayish-violet);
         padding-left:10px;
+        opacity:0.6;
     }
 
     .add-link-warning-msg {
@@ -295,18 +305,28 @@ p {
         font-size:0.70rem;
         color:red;
         color:var(--red);
+        overflow:hidden;
         margin-top:5px;
+
+        max-height:0px;
+        transition: ease 0.25s max-height;
+    }
+
+    .warning-msg-on.add-link-warning-msg {
+        border:none;
+        max-height:500px;
+        transition: ease 1s max-height;
     }
 
     /*############
     if their is no input / link
     put into the input box apply these styles
     */
-    
     .warning-msg-on.link-shortener__input::placeholder,
     .warning-msg-on.link-shortener__input::-webkit-input-placeholder {
         color:red;
         color:var(--red);
+        opacity:0.6;
     }
 
     .warning-msg-on {
@@ -319,7 +339,7 @@ p {
     .btn--shorten-it {
         position: absolute;
         font-size:0.95rem;
-        width:80%;
+        width:85%;
         height:2.5rem;
         left:50%;
         top:80%;
@@ -339,7 +359,7 @@ p {
     .link-shortener__output {
         position: relative;
         background-color: #fff;
-        width:80%;
+        width:90%;
         margin:1rem auto;
         height:10rem;
 
@@ -362,7 +382,7 @@ p {
         text-overflow: ellipsis;
         -ms-text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
-        width:80%;
+        width:90%;
     }
 
     .link-shortener__output__lo,
@@ -431,9 +451,9 @@ p {
     position: relative;
     background-color: #fff;
     border-radius:5px;
-    width:80%;
-    margin:4rem auto 4rem auto;
-    padding:2.25rem 0;
+    width:90%;
+    margin:5rem auto 5rem auto;
+    padding:2.5rem 0;
 
     z-index:100;
 }
@@ -484,7 +504,7 @@ p {
     content:'';
     position: absolute;
     width:6px;
-    height: 50px;
+    height: 100px;
     background-color:cyan;
     background-color:var(--cyan);
     left:50%;
@@ -516,13 +536,16 @@ p {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-image: url("assets/images/bg-boost-mobile.svg");
+
+    margin:0;
+    padding:0;
 }
 
 .call-to-action__inner {
     position: relative;
     left:50%;
     top:50%;
-    transform:translate(-50%,-50%);
+    transform:translate(-50%, -50%);
 }
 
 .call-to-action__header {
@@ -535,6 +558,7 @@ p {
 
 
 
+/*footer*/
 .footer {
     background-color:black;
     background-color:var(--very-dark-violet);
@@ -584,11 +608,19 @@ p {
         background-color:var(--cyan);
         border:none;
         font-weight:700;
+
+        transition: ease 0.2s opacity;
     }
 
     .btn:hover {
         cursor:pointer;
     }
+
+    .btn:active {
+        transition: ease 0.2s opacity;
+        opacity:0.6;
+    }
+
     /*very round corners*/
     .btn--type-1 {
         
@@ -606,9 +638,3 @@ p {
 
 
 
-/*
-TODO:
-1. navbar dropdown menu
-2. main section
-3. the rest of the site..
-*/
