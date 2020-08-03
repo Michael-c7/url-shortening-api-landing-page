@@ -409,8 +409,8 @@ p {
 }
 
 .stats-content {
-
-}
+    position: relative;
+ }
 
 .stats-content__header {
     font-size:1.5rem;
@@ -435,24 +435,8 @@ p {
     margin:4rem auto 4rem auto;
     padding:2.25rem 0;
 
-    z-index:200;
+    z-index:100;
 }
-
-.stats__card::after {
-    content:'';
-    position: absolute;
-    width:5px;
-    height: 100px;
-    background-color:red;
-    left:50%;
-    top:-50%;
-
-    transform:translate(-50%, 50%);
-
-    z-index:-150;
-}
-
-/*remove first ::after line*/
 
 .stats__card__image {
     position: absolute;
@@ -469,7 +453,8 @@ p {
     left:50%;
     top:-20%;
     transform:translate(-50%, 20%);
-    
+
+    z-index:100;
 }
 
 .stats__image-1 {
@@ -484,7 +469,6 @@ p {
     background-image: url("assets/images/icon-fully-customizable.svg");
 }
 
-
 .stats__card__header {
     font-size:1.15rem;
 }
@@ -494,6 +478,23 @@ p {
     width:28ch;
     margin:0 auto;
     line-height: 1.8;
+}
+
+.stats__card::after {
+    content:'';
+    position: absolute;
+    width:6px;
+    height: 50px;
+    background-color:cyan;
+    background-color:var(--cyan);
+    left:50%;
+    top:100%;
+
+    z-index:50;
+}
+
+.stats__card:last-of-type::after {
+    content:none;
 }
 /*end of stats*/
 
