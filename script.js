@@ -46,6 +46,25 @@ function linkShortenerInputWarningFunctionality(event) {
 
 
 
+// change copy button styles upon click
+linkShortenerOutputContainer.addEventListener('click', (event) => {
+    let clickedTarget = event.target;
+
+    // change styles
+    if(clickedTarget.closest('button.btn--copy')) {
+        /*change text*/
+        clickedTarget.textContent = 'Copied!';
+
+        /*change background color*/
+        /*fallback color */
+        clickedTarget.style.backgroundColor = 'darkslateblue';
+        /*preferred color*/
+        clickedTarget.style.backgroundColor = 'var(--dark-violet)';
+    }
+});
+
+
+
 
 /*shorten link */
 shortenItButton.addEventListener('click', createLinkShortenerOutput);
@@ -65,12 +84,13 @@ function createLinkShortenerOutput(shortenedLink) {
    
    let fragment = new DocumentFragment();
    let originalLink = `https://www.frontendmentor.io`;
-   fragment.appendChild(originalLink);
+//    fragment.appendChild(originalLink);
 
-   console.log(fragment);
+//    console.log(fragment);
     
 
-    linkShortenerOutputContainer.insertAdjacentElement("beforeend",fragment);
+    // linkShortenerOutputContainer.insertAdjacentElement("beforeend",fragment);
+    
     /* 
     ***STEPS*** 
     1. create a document fragment of the link-shortener__output

@@ -243,8 +243,7 @@ p {
  /*mid-section*/
 .mid-section {
     position: relative;
-    background-color:gray;
-    background-color:hsl(0, 0%, 93%);
+    background-color:#F0F1F6;
     padding-bottom:0.1rem;
     margin-bottom:-2rem;
 }
@@ -533,7 +532,7 @@ p {
     background-color: darkslateblue;
     background:var(--dark-violet);
 
-    background-position: 50% 50%;
+    background-position: 100% 50%;
     background-repeat: no-repeat;
     background-image: url("assets/images/bg-boost-mobile.svg");
 
@@ -638,3 +637,92 @@ p {
 
 
 
+
+
+
+
+
+/*tablet : 768px*/
+@media(min-width:768px) {
+/*
+change :
+    1. main to desktop view
+    2. call-to-action background
+image from the mobile to the desktop image
+*/
+
+
+/*main : tablet : 768px*/
+.main-content {
+    position: relative;
+    width:100%;
+    height:25rem;
+    margin-bottom:8rem;
+
+    text-align:left;
+}
+
+.main-content__hero-image-container {
+    position: relative;
+    width:50%;
+    height:100%;
+    left:100%;
+    transform:translateX(-100%);
+    overflow:hidden;
+    /*increase padding at 768px break point*/
+    padding:0;
+
+    /* background-color:red; */
+}
+
+.main-content__hero-image {
+    position: relative;
+    /* margin-top:25%; */
+    transform:scale(1.2), translate(-15%, -5.5rem);
+    top:5.5rem;
+    left:15%;
+
+    transform-origin: center;
+
+    /* background-color:blue; */
+}
+
+.main-content__content {
+    position: absolute;
+    top:50%;
+    left:9%;
+    transform:translate(-9%, -50%);
+}
+
+.main-content__header {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+
+.main-content__text {
+    margin:-2rem 0 1rem 0;
+    width:28ch;
+    line-height: 1.6;
+    font-size: 0.85rem;
+}
+
+.btn--get-started { 
+    position: relative;
+    width:135px;
+    height:35px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    /* transform:scale(0.8); */
+    left:0;
+}
+ /*end of main*/
+
+
+
+
+
+
+
+}
