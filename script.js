@@ -9,6 +9,8 @@ let addLinkWarningMsg = linkShortener.querySelector('.add-link-warning-msg');
 
 let shortenItButton = linkShortener.querySelector('button.btn--shorten-it');
 
+let linkShortenerOutputContainer = linkShortener.querySelector('.link-shortener__output-container');
+
 /*navbar*/
 hamburgerMenu.addEventListener('click', navbarFunctionality);
 
@@ -60,17 +62,23 @@ function createLinkShortenerOutput(shortenedLink) {
     </div>
     */
 
-    /*STEP : 1*/
+   
+   let fragment = new DocumentFragment();
+   let originalLink = `https://www.frontendmentor.io`;
+   fragment.appendChild(originalLink);
+
+   console.log(fragment);
     
 
-
-
+    linkShortenerOutputContainer.insertAdjacentElement("beforeend",fragment);
     /* 
     ***STEPS*** 
     1. create a document fragment of the link-shortener__output
     2. append this to the DOM within the link-shortener__output-container
     */
 }
+
+createLinkShortenerOutput();
 
 
 function shortenLink(linkToShorten) {
@@ -97,4 +105,8 @@ function shortenLink(linkToShorten) {
  to the users clip board
  */ 
 
- /*would also like to use session / local storage to save the link that have been created */
+ /*
+ would also like to use
+  session / local storage
+  to save the link that have been created
+ */
