@@ -59,7 +59,7 @@ function createLinkShortenerOutput(shortenedLink) {
         <!--link modified-->
         <span class="link-shortener__output__lm">https://rel.ink/gxOXp9</span>
         <button class="btn btn--type-2 btn--copy">Copy</button>
-    </div>
+    </div> 
     */
 
    
