@@ -130,3 +130,6 @@ function shortenLink(linkToShorten) {
   session / local storage
   to save the link that have been created
   */
+
+
+

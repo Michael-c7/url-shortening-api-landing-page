@@ -645,6 +645,8 @@ p {
 /*tablet : 768px*/
 @media(min-width:768px) {
 
+
+
 /*main : 768px*/
 .main-content {
     position: relative;
@@ -726,85 +728,91 @@ p {
     position: relative;
     width:100%;
     padding:1.5rem 0 0.5rem;
-    /* height:5rem; */
+    height:5rem;
+
+    /* background-color: brown; */
 }
 
 .navbar__inner {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items:center;
     width:75%;
     height:100%;
     margin:0 auto;
+
+    /* background-color: beige; */
 }
 
 .navbar-logo {
     transform:scale(0.9);
+    width:8rem;
+    z-index:500;
 }
 
 .navbar__hamburger-menu {
     position: relative;
-}
-
-.navbar__hamburger-menu__bar {
     display:none;
 }
 
 .navbar__items-container {
-    position: absolute;
+    position: relative;
+
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items:center;
-    color:white;
-    background-color: darkslateblue;
+    justify-content: space-between;
+    align-items: center;
+    
+    color:black;
     background:none;
     width:100%;
-    height:auto;
+    height:100%;
 
     max-height: 100rem;
     overflow:hidden;
+    transition: max-height 0.75s ease-in-out;
 
     top:0%;
     left:0;
+    border-radius:0px;
     text-align: center;
     font-size:0.75rem;
     
     z-index:400;
+
+    /* background-color:gray; */
 }
 
+.navbar__item-1,
+.navbar__item-2 {
+    padding:0 0.5rem;
+}
+
+.navbar__item-1-link,
+.navbar__item-2-link {
+    opacity: 0.7;
+    transition: ease 5ms opacity;
+}
+
+.navbar__item-1-link:active,
+.navbar__item-2-link:active {
+    opacity: 1;
+    transition: ease 5ms opacity;
+}
 
 .navbar__items-1 {
     position: relative;
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     height:50%;
-
-    border-radius:0px;
-    /* background-color:blue; */
-}
-
-.navbar__item-1,
-.navbar__item-2 {
-    padding:0 0.65rem;
-    color:black;
-}
-
-.navbar__item-1-link,
-.navbar__item-2-link  {
-    opacity:0.7; 
-}
-
-.navbar__item-1-link:active,
-.navbar__item-2-link:active {
-    opacity:1;
+    border-radius:0px;  
 }
 
 .navbar__items-1::after {
-    content: none;
+    content:none;
 }
 
 
@@ -812,20 +820,18 @@ p {
     position: relative;
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height:50%;
     border-radius:0px;
-    /* background-color:blue; */
 }
 
 .btn--sign-up {
-    width:5rem;
+    width:100px;
     height:2rem;
     font-size:0.75rem;
-    opacity: 1;
 }
- /*end of navbar : 1024px*/
+/*end of navbar : 1024px*/
 
 
 
