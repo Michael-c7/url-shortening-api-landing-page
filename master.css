@@ -351,16 +351,16 @@ p {
         width:100%;
         height:auto;
         padding-top:6rem;
-    }
 
-    
+        text-align:left;
+    }
 
     .link-shortener__output {
         position: relative;
         background-color: #fff;
         width:90%;
         margin:1rem auto;
-        height:10rem;
+        height:8rem;
 
         display:flex;
         flex-direction: column;
@@ -385,7 +385,8 @@ p {
     }
 
     .link-shortener__output__lo,
-    .link-shortener__output__lm {
+    .link-shortener__output__lm,
+    .btn--copy {
         margin-left:5%;
         font-size:0.80rem;
     }
@@ -400,16 +401,25 @@ p {
         background-color:rgba(25, 25, 25, 0.15);
     }
 
+    .link-shortener__lm-container {
+        position: relative;
+        width:100%;
+        
+        top:0;
+        /* background-color:#f11; */
+    }
+
     .link-shortener__output__lm {
         color:cyan;
         color:var(--cyan);
+        
     }
 
     .btn--copy {
+        position: relative;
         width:90%;
         height:2rem;
-        font-size:0.85rem;
-        align-self:center;
+        margin-top:0.5rem;
     }
     /*end of link-shortener*/
     
@@ -646,7 +656,6 @@ p {
 @media(min-width:768px) {
 
 
-
 /*main : 768px*/
 .main-content {
     position: relative;
@@ -664,10 +673,7 @@ p {
     left:100%;
     transform:translateX(-100%);
     overflow:hidden;
-    /*increase padding at 768px break point*/
     padding:0;
-
-    /* background-color:red; */
 }
 
 .main-content__hero-image {
@@ -678,8 +684,6 @@ p {
     top:75%;
     
     transform-origin: center;
-
-    /* background-color:blue; */
 }
 
 .main-content__content {
@@ -729,8 +733,6 @@ p {
     width:100%;
     padding:1.5rem 0 0.5rem;
     height:5rem;
-
-    /* background-color: brown; */
 }
 
 .navbar__inner {
@@ -741,8 +743,6 @@ p {
     width:75%;
     height:100%;
     margin:0 auto;
-
-    /* background-color: beige; */
 }
 
 .navbar-logo {
@@ -780,8 +780,6 @@ p {
     font-size:0.75rem;
     
     z-index:400;
-
-    /* background-color:gray; */
 }
 
 .navbar__item-1,
@@ -843,8 +841,6 @@ p {
     width:100%;
     height:25rem;
     margin-bottom:8rem;
-
-    text-align:left;
 }
 
 .main-content__hero-image-container {
@@ -856,20 +852,14 @@ p {
     overflow:hidden;
     /*increase padding at 768px break point*/
     padding:0;
-
-    /* background-color:red; */
 }
 
 .main-content__hero-image {
     position: relative;
-    /* margin-top:25%; */
-    transform:scale(1.0) translate(0%, -75%);
-    left:-0%;
-    top:75%;
-
+    transform:scale(1.05) translateY(-50%);
+    left:15%;
+    top:50%;
     transform-origin: center;
-
-    /* background-color:blue; */
 }
 
 .main-content__content {
@@ -877,8 +867,6 @@ p {
     top:50%;
     left:20%;
     transform:translate(-20%, -50%);
-
-    background-color:#f11;
 }
 
 .main-content__header {
@@ -888,24 +876,172 @@ p {
 
 
 .main-content__text {
-    margin:-1.5rem 0 1rem 0;
-    width:28ch;
-    line-height: 1.6;
-    font-size: 0.85rem;
+    width:40ch;
 }
 
 .btn--get-started { 
     position: relative;
-    width:135px;
-    height:35px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    /* transform:scale(0.8); */
-    left:0;
+    width:7.5rem;
+    height:2.25rem;
 }
  /*end of main : 1024px*/
 
+
+
+
+
+ /*mid-section : 1024px*/
+ .mid-section {
+    position: relative;
+    background-color:#F0F1F6;
+    padding-bottom:0.1rem;
+    margin-bottom:-2rem;
+}
+
+    /*link-shortener*/
+    .link-shortener-section {
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+        position: absolute;
+        width:75%;
+        height:8rem;
+        padding:0 0.5rem;
+        border-radius: 10px;
+
+        background-color:var(--dark-violet);
+        background-image: url("assets/images/bg-shorten-desktop.svg");
+        background-position:bottom center;
+        background-repeat: no-repeat;
+        background-size:100%;
+
+        left:50%;
+        bottom:96%;
+        transform:translate(-50%);
+
+        z-index:200;
+    }
+    /*link input*/
+    .link-shortener__input-container {
+        position: relative;
+        width:75%;
+        height:2.5rem;
+        left:0%;
+        top:0%;
+        transform:translate( -0%, -0%);
+        z-index:300;
+    }
+
+    .link-shortener__input {
+        position: relative;
+        width:100%;
+        height:100%;
+        border:none;
+        border-radius:5px;
+    }
+    
+    .btn--shorten-it {
+        position: relative;
+        font-size:0.95rem;
+        width:8rem;
+        height:2.5rem;
+        left:0%;
+        top:0%;
+        transform:translate( -0%, -0%);
+        z-index:200;
+    }
+
+    /*link output*/
+    .link-shortener__output-container {
+        width:100%;
+        height:auto;
+        padding-top:4rem;
+    }    
+
+    .link-shortener__output {
+        position: relative;
+        background-color: #fff;
+        width:75%;
+        margin:0.6rem auto;
+        height:3rem;
+
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+
+        border-radius:5px;
+    }
+
+    .link-shortener__output__lo {
+        position: absolute;
+        left:1rem;
+        top:50%;
+        transform:translateY(-50%);
+
+
+        /*
+        Truncate Text
+        Note: truncate text only works for single line elements
+        */
+        overflow:hidden;
+        /*keeps everything on one line*/
+        white-space: nowrap;
+        /*if text overflow the width, ends the text w/ ...*/
+        text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        width:90%;
+    }
+
+    .link-shortener__output__lo,
+    .link-shortener__output__lm,
+    .btn--copy {
+        margin-left:0%;
+        font-size:0.7rem;
+    }
+
+    .link-shortener__output__lo::after {
+        content:none;
+    }
+
+    .link-shortener__lm-container {
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items:center;
+
+        position: absolute;
+        left:0%;
+        top:0%;
+        transform:translate(0%, -0%);
+        height:100%;
+        width:100%;
+
+        /* background-color:red; */
+    }
+
+    .link-shortener__output__lm {
+        color:cyan;
+        color:var(--cyan);
+    }
+
+    .btn--copy-container {
+        position: relative;
+        /* background-color:orange; */
+        height:100%;
+        margin:0 1rem;
+    }
+
+    .btn--copy {
+        width:4.5rem;
+        height:1.5rem;
+        top:20%;
+        transform:translateY(-20%);
+    }
+    /*end of link-shortener*/
+    
+
+ /*end of mid-section : 1024px*/
 
 
 
