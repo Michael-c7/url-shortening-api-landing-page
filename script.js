@@ -17,7 +17,7 @@ hamburgerMenu.addEventListener('click', navbarFunctionality);
 function navbarFunctionality (event) {
     navbarItemsContainer.classList.toggle('is-open');
 
-    console.log(event.target);
+    // console.log(event.target);
 }
 
 
