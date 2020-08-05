@@ -1039,11 +1039,117 @@ p {
         transform:translateY(-20%);
     }
     /*end of link-shortener*/
-    
-
- /*end of mid-section : 1024px*/
 
 
+
+
+
+    /*stats*/
+    .stats {
+        padding-top:3rem;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .stats-content {
+        position: relative;
+    }
+
+    .stats-content__header {
+        font-size:1.5rem;
+    }
+
+    .stats-content__text {
+        font-size:0.85rem;
+        width:30ch;
+        margin:0 auto 2rem auto;
+    }
+
+    /* stats cards*/
+    .stats__cards {
+        position: relative;
+        width:75%;
+        margin:0 auto;
+        display:flex;
+        justify-content: center;
+
+        background-color: #ff1;
+    }
+
+    .stats__card {
+        position: relative;
+        background-color: #fff;
+        border-radius:5px;
+        width:20rem;
+        height:50%;
+        margin:0;
+        padding:2.5rem 0;
+
+        z-index:100;
+    }
+
+    .stats__card__image {
+        position: absolute;
+        background-color: darkslateblue;
+        background:var(--dark-violet);
+        width:75px;
+        height:75px;
+        border-radius:50%;
+
+        background-position: 50% 50%;
+        background-size: 2rem;
+        background-repeat: no-repeat;
+
+        left:50%;
+        top:-20%;
+        transform:translate(-50%, 20%);
+
+        z-index:100;
+    }
+
+    .stats__image-1 {
+        background-image: url("assets/images/icon-brand-recognition.svg");
+    }
+
+    .stats__image-2 {
+        background-image: url("assets/images/icon-detailed-records.svg");
+    }
+
+    .stats__image-3 {
+        background-image: url("assets/images/icon-fully-customizable.svg");
+    }
+
+    .stats__card__header {
+        font-size:1.15rem;
+    }
+
+    .stats__card__text {
+        font-size:0.8rem;
+        width:28ch;
+        margin:0 auto;
+        line-height: 1.8;
+    }
+
+    .stats__card::after {
+        content:'';
+        position: absolute;
+        width:6px;
+        height: 100px;
+        background-color:cyan;
+        background-color:var(--cyan);
+        left:50%;
+        top:100%;
+
+        z-index:50;
+    }
+
+    .stats__card:last-of-type::after {
+        content:none;
+    }
+    /*end of stats*/
+
+
+/*end of mid-section : 1024px*/
 
 
 
