@@ -60,6 +60,8 @@ linkShortenerOutputContainer.addEventListener('click', (event) => {
         clickedTarget.style.backgroundColor = 'darkslateblue';
         /*preferred color*/
         clickedTarget.style.backgroundColor = 'var(--dark-violet)';
+
+        // copy target link link to clipboard
     }
 });
 
