@@ -404,15 +404,12 @@ p {
     .link-shortener__lm-container {
         position: relative;
         width:100%;
-        
         top:0;
-        /* background-color:#f11; */
     }
 
     .link-shortener__output__lm {
         color:cyan;
         color:var(--cyan);
-        
     }
 
     .btn--copy {
@@ -451,9 +448,16 @@ p {
     margin:0 auto 2rem auto;
 }
 
+
+.stats__cards-container {
+    position: relative;
+}
+
 /* stats cards*/
 .stats__cards {
     position: relative;
+    width:inherit;
+    height:inherit; 
 }
 
 .stats__card {
@@ -470,7 +474,7 @@ p {
 .stats__card__image {
     position: absolute;
     background-color: darkslateblue;
-    background:var(--dark-violet);
+    background-color:var(--dark-violet);
     width:75px;
     height:75px;
     border-radius:50%;
@@ -509,7 +513,28 @@ p {
     line-height: 1.8;
 }
 
-.stats__card::after {
+.stat-underline {
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
+
+.stat-underline::after {
+    content:'';
+    position: absolute;
+    width:6px;
+    height: 100%;
+    background-color:cyan;
+    background-color:var(--cyan);
+    left:50%;
+    top:0;
+    transform:translate(-50%, -0%);
+}
+
+
+/* .stats__card::after {
     content:'';
     position: absolute;
     width:6px;
@@ -524,7 +549,7 @@ p {
 
 .stats__card:last-of-type::after {
     content:none;
-}
+} */
 /*end of stats*/
 
 
@@ -1052,10 +1077,11 @@ p {
 
         height:35rem;
     }
-
+    
     .stats-content {
         position: relative;
     }
+    
 
     .stats-content__header {
         position: relative;
@@ -1074,12 +1100,21 @@ p {
         width:100%;
         height:100%;
         left:0;
-        background-color: red;
+        top:0;
     }
-
-    /*working on the stat-underline
-        : breaks the align-self on on of the items
-    */
+    
+    .stat-underline::after {
+        content:'';
+        position: absolute;
+        width:90%;
+        height: 6px;
+        background-color:cyan;
+        background-color:var(--cyan);
+        
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+    }
     
     /* .stat-underline:after {
         position: absolute;
@@ -1091,12 +1126,20 @@ p {
         transform:translateX(-50%);
     } */
 
-    /* stats cards*/
-    .stats__cards {
+    .stats__cards-container  {
         position: relative;
+       
         width:75%;
         height:14rem;
         margin:0 auto;
+    }
+
+    /* stats cards*/
+    .stats__cards {
+        position: relative;
+        width:100%;
+        height:100%;
+        
         text-align:left;
         display:flex;
         justify-content: space-around;
@@ -1198,6 +1241,87 @@ p {
 
 
 /*end of mid-section : 1024px*/
+
+
+
+
+
+/*call-to-action*/
+.call-to-action {
+    position: relative;
+    width:100%;
+    height:13rem;
+    text-align: center;
+
+    color:white;
+    background-color: darkslateblue;
+    background:var(--dark-violet);
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("assets/images/bg-boost-desktop.svg");
+
+    margin:0;
+    padding:0;
+}
+
+/* .call-to-action__inner {
+    position: relative;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+.call-to-action__header {
+    font-size:1.5rem;
+    margin-bottom:0.75rem;
+} */
+/*end of call-to-action*/
+
+
+
+
+
+/*footer*/
+.footer {
+    background-color:black;
+    background-color:var(--very-dark-violet);
+    text-align: center;
+    padding:2rem 0;
+}
+
+.footer-logo .shorty-logo__color {
+    fill:#fff;
+}
+
+.footer__item {
+    padding:0.15rem 0;
+}
+
+.footer__item__header {
+    color:#fff;
+    font-size:0.85rem;
+    margin-bottom:0.5rem;
+}
+
+.footer__item-link {
+    color:gray;
+    color:var(--gray);
+    font-size:0.75rem;
+}
+
+.footer__social-links {
+    margin-top:2rem;
+}
+
+.footer__social-link {
+    transform:scale(0.85);
+    margin:0 0.25rem;
+}
+/*end of footer*/
+
+
+
 
 
 
