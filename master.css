@@ -1049,6 +1049,8 @@ p {
         padding-top:3rem;
         text-align: center;
         line-height: 1.6;
+
+        height:35rem;
     }
 
     .stats-content {
@@ -1056,53 +1058,88 @@ p {
     }
 
     .stats-content__header {
-        font-size:1.5rem;
+        position: relative;
+        font-size:1rem;
     }
 
     .stats-content__text {
+        position: relative;
         font-size:0.85rem;
         width:30ch;
         margin:0 auto 2rem auto;
     }
 
+    .stat-underline {
+        position: absolute;
+        width:100%;
+        height:100%;
+        left:0;
+        background-color: red;
+    }
+
+    /*working on the stat-underline
+        : breaks the align-self on on of the items
+    */
+    
+    /* .stat-underline:after {
+        position: absolute;
+        width:90%;
+        height: 6px;
+        background-color:cyan;
+        background-color:var(--cyan);
+        left:50%;
+        transform:translateX(-50%);
+    } */
+
     /* stats cards*/
     .stats__cards {
         position: relative;
         width:75%;
+        height:14rem;
         margin:0 auto;
+        text-align:left;
         display:flex;
-        justify-content: center;
-
-        background-color: #ff1;
+        justify-content: space-around;
+        align-items:center;
     }
 
     .stats__card {
         position: relative;
         background-color: #fff;
         border-radius:5px;
-        width:20rem;
-        height:50%;
-        margin:0;
-        padding:2.5rem 0;
+        width:calc(100% / 3);
+        height:80%;
+        margin: 0 0.5rem;
+        padding: 0;
 
-        z-index:100;
+        z-index:100;  
+    }
+
+    .stats__card:first-of-type {
+        margin-left:0;
+        align-self:flex-start;
+    }
+
+    .stats__card:last-of-type {
+        margin-right:0;
+        align-self:flex-end;
     }
 
     .stats__card__image {
         position: absolute;
         background-color: darkslateblue;
         background:var(--dark-violet);
-        width:75px;
-        height:75px;
+        width:65px;
+        height:65px;
         border-radius:50%;
 
         background-position: 50% 50%;
         background-size: 2rem;
         background-repeat: no-repeat;
 
-        left:50%;
-        top:-20%;
-        transform:translate(-50%, 20%);
+        left:10%;
+        top:-25%;
+        transform:translate(-10%, 25%);
 
         z-index:100;
     }
@@ -1119,33 +1156,44 @@ p {
         background-image: url("assets/images/icon-fully-customizable.svg");
     }
 
+    .stats__card__content {
+        position: absolute;
+        width:90%;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+
+        text-align: left;
+    }
+
     .stats__card__header {
-        font-size:1.15rem;
+        position: relative;
+        font-size:1.0rem;
     }
 
     .stats__card__text {
-        font-size:0.8rem;
-        width:28ch;
-        margin:0 auto;
+        position: relative;
+        font-size:0.7rem;
+        width:100%;
+        margin:-0.75rem auto 0 auto;
         line-height: 1.8;
     }
 
-    .stats__card::after {
-        content:'';
+    /* .stats__card::after {
+        content:none;
         position: absolute;
-        width:6px;
-        height: 100px;
+        width:100%;
+        height: 100%;
         background-color:cyan;
         background-color:var(--cyan);
+
         left:50%;
-        top:100%;
+        top:25%;
+        transform:rotate(90deg) translateX(-50%);
+        z-index:-500;
+    } */
 
-        z-index:50;
-    }
-
-    .stats__card:last-of-type::after {
-        content:none;
-    }
+    
     /*end of stats*/
 
 
