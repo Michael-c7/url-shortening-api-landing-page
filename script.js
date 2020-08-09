@@ -128,8 +128,6 @@ function shortenLink(linkToShorten) {
    */
 }
 
-
-
 /*
  change link-shortener__output__lm text
  to copied and apply the purple color
