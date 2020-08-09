@@ -62,6 +62,18 @@ linkShortenerOutputContainer.addEventListener('click', (event) => {
         clickedTarget.style.backgroundColor = 'var(--dark-violet)';
 
         // copy target link link to clipboard
+        let targetLink = clickedTarget.parentElement.parentElement;
+        let targetLM = targetLink.querySelector('.link-shortener__output__lm');
+        
+        // console.log(targetLM.textContent);
+
+        
+        
+        // targetLM.innerHTML.select();
+        // console.log(targetLM)
+        targetLM.style.userSelect = 'contain';
+        document.execCommand('Copy');
+
     }
 });
 
@@ -128,10 +140,7 @@ function shortenLink(linkToShorten) {
  */ 
 
  /*
- would also like to use
+  would also like to use
   session / local storage
   to save the link that have been created
   **/
-
-
-
