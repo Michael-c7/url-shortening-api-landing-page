@@ -204,7 +204,7 @@ createLinkShortenerOutput('userInputHere', completeRandomString);
   */  
 
 
-  /*
+/*
   In short the current tasks I have to complete are
   1. inject the link and the shorten link to the DOM
   using a unique ID so you could insert a hypothetically infinite amount of them
@@ -213,4 +213,4 @@ createLinkShortenerOutput('userInputHere', completeRandomString);
   - 2.1 : select the text
   - 2.2 : copy the selected text (current link)
   to the clipboard (just like ctrl + c)
-  */
+*/
