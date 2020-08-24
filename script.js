@@ -176,7 +176,8 @@ function createLinkShortenerOutput(originalLink, shortenedLink) {
 
     // console.log(docFrag);
 
-    /* 2. inject the entire thing into the DOM
+    /*
+    2. inject the entire thing into the DOM
     create unique thing for each thing created.
     think the unique id should be based
     on the length of the total of all items
@@ -197,11 +198,11 @@ createLinkShortenerOutput('userInputHere', completeRandomString);
  to the users clip board
  */ 
 
- /*
+/*
   would also like to use
   session / local storage
   to save the link that have been created
-  */  
+*/  
 
 
 /*
