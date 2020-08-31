@@ -215,3 +215,8 @@ createLinkShortenerOutput('userInputHere', completeRandomString);
   - 2.2 : copy the selected text (current link)
   to the clipboard (just like ctrl + c)
 */
+
+
+
+
+
